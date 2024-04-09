@@ -1,0 +1,357 @@
+.formContainer{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #131324;
+  .heading{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 1rem;
+   color: #fff;
+   img{
+    height:3rem;
+    width: 3rem;
+   }
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #00000076;
+    padding: 3rem 5rem;
+    border-radius: 2rem;
+    input{
+      padding: 0.7rem;
+      background-color: transparent;
+      border: 0.1rem solid #4e0eff;
+      border-radius: 0.6rem;
+      width: 100%;
+      color: #fff;
+    }
+    button{
+      width: 110%;
+      padding: 0.5rem;
+      border-radius: 0.8rem;
+      font-size: 1rem;
+      background-color: #997af0;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      &:hover{
+        background-color: #4e0eff;
+        transition: 0.5s;
+      }
+    }
+    span{
+      color: #fff;
+      a{
+        text-decoration: none;
+        color: #fff;
+        padding-left: 0.3rem;
+      }
+    }
+  }
+}
+
+
+
+/**************** Set Avatar Page ***************/
+
+.AvatarContainer{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131324;
+  flex-direction: column;
+  gap: 2rem;
+
+  .heading{
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  .ImageContainer{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .Img{
+      border: 0.2rem solid transparent;
+      padding: 0.3rem;
+      border-radius: 8rem;
+    }
+
+    .Img:active{
+      border-color: #4e0eff;
+    }
+
+
+    img{
+      height: 5rem;
+      cursor: pointer;
+    }
+
+  }
+
+  .btn{
+    width: 20%;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    background-color: #997af0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    &:hover{
+      background-color: #4e0eff;
+      transition: 0.5s;
+    }
+  }
+}
+
+/*******************Chat Section************/
+
+.Chatcontainer{
+  height: 100vh;
+  width: 100vw;
+  background-color: #131324;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .chatSection{
+    height: 85vh;
+    width: 85vw;
+    background-color: #00000076;
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
+}
+
+
+
+/******************Contacts*************/
+
+.ContactsContainer{
+  height: 100%;
+  width: 100%;
+  background-color: #080420;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  .brand{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    img{
+      height: 3rem;
+      width: 3rem;
+    }
+    h1{
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+  .contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1rem;
+    gap: 1rem;
+    height: auto;
+    background-color: #ffffff39;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    h3{
+      color: #fff;
+    }
+    img{
+      color: #fff;
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+  .CurrentUser{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    gap: 1rem;
+    position: absolute;
+    bottom: 0;
+    background-color: #ffffff39;
+    width:100%;
+    h3{
+      color: #fff;
+    }
+    img{
+      color: #fff;
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+  .selected{
+    background-color: #9186f3;
+  }
+}
+
+
+
+/****************UserChat***************/
+
+.UserChatContainer{
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+  overflow: hidden;
+  .footer{
+    background-color: #9186f3;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    img{
+      height: 2rem;
+    }
+    .powerBtn{
+      height: 2rem;
+      width: 2rem;
+      background-color: #4e42f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      border-radius: 2rem;
+      svg{
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .chat-messages{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0.2rem;
+      &-thumb {
+        background-color: #ffffff39;
+        width: 0.1rem;
+        border-radius: 1rem;
+      }
+    }
+    .message {
+      display: flex;
+      align-items: center;
+      .content {
+        max-width: 40%;
+        overflow-wrap: break-word;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 1.1rem;
+        border-radius: 1rem;
+        color: #d1d1d1;
+      }
+    }
+    .sender{
+      display: flex;
+      justify-content: flex-end;
+      .content {
+        background-color: #4f04ff21;
+      }
+    }
+    .receiver{
+      display: flex;
+      justify-content: flex-start;
+      .content {
+        background-color: #9900ff20;
+      }
+    }
+  }
+  .footer div{
+    align-items: center;
+  }
+}
+
+
+
+/*****************Welcome Container*********************/
+.WelcomeContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  img{
+    height: 15rem;
+  }
+}
+
+
+
+/*******************Input Container***********************/
+
+.InputContainer{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  .emojiPicker{
+    position: relative;
+    color: yellow;
+    font-size: 1.5rem;
+    cursor: pointer;
+    .EmojiPickerReact{
+      height: 350;
+      width: 250;
+      position: absolute;
+      top:-29rem
+    }
+    
+  }
+  .inputText{
+    width: 92%;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.6rem;
+    input{
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      &:focus{
+        outline: none;
+      }
+    }
+    button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+}
+
+
+
+
+
+
